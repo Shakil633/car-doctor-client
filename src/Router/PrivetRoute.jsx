@@ -10,7 +10,7 @@ const PrivetRoute = ({ children }) => {
     return <progress className="progress w-56"></progress>;
   }
 
-  if (user?.email) {
+  if (!user?.email) {
     return children;
   }
   return <Navigate state={location.pathname} to={"/login"}></Navigate>;
